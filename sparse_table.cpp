@@ -1,4 +1,4 @@
-struct spr
+ struct spr
 {
   ll n;
   int b=20;
@@ -18,3 +18,8 @@ struct spr
           }
       }
 }
+  ll Rmnq(ll l,ll r){
+     int k=31-__builtin_clz(r-l+1);
+     return min(v[l][k],v[r-(1<<k)+1][k]);
+  }
+};
