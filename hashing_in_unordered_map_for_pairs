@@ -1,0 +1,8 @@
+struct PairHash {
+    size_t operator()(const pair<ll,ll>& p) const noexcept {
+        return std::hash<ll>()(p.first) ^ (std::hash<ll>()(p.second) << 1);
+    }
+};
+// this is how to declare unordered maps
+// unordered_map<pair<ll,ll>,pair<ll,ll>,PairHash>m;
+ // unordered_map<pair<ll,ll>, ll, PairHash> m;
